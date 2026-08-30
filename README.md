@@ -1,4 +1,4 @@
-# Bilal — Google Ads Expert Portfolio
+# Bilal Google Ads Expert Portfolio
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
