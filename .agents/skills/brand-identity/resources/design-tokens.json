@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "brand_name": "Google Ads Expert Portfolio",
+    "theme_name": "Deep Ocean / Electric Blue / Glass",
+    "description": "Design tokens and visual constraints for the Google Ads Expert portfolio website."
+  },
+  "colors": {
+    "foundation": {
+      "deepest_navy": "#020617",
+      "midnight_navy": "#030B1C",
+      "deep_ocean_navy": "#06132B",
+      "dark_blue": "#081B3A"
+    },
+    "primary_blues": {
+      "deep_royal": "#0B2A5B",
+      "rich_cobalt": "#0D47A1",
+      "primary_electric": "#155EEF",
+      "bright_blue": "#1677FF"
+    },
+    "glow_energy": {
+      "electric_blue": "#008CFF",
+      "luminous_blue": "#00A8FF",
+      "cyan_blue": "#00C2FF",
+      "bright_cyan": "#29D9FF"
+    },
+    "light_glass_highlights": {
+      "soft_sky": "#7DD3FC",
+      "pale_blue": "#BAE6FD",
+      "ice_blue": "#D7EFFF",
+      "blue_tinted_white": "#EFF8FF",
+      "near_white": "#F8FBFF"
+    },
+    "neutrals": {
+      "pure_white": "#FFFFFF",
+      "cool_light_gray": "#E5E7EB",
+      "slate_gray": "#94A3B8",
+      "dark_slate": "#475569"
+    },
+    "semantic": {
+      "background": "#020617",
+      "surface": "#081B3A",
+      "surface_elevated": "#0B2A5B",
+      "foreground": "#F8FBFF",
+      "foreground_muted": "#94A3B8",
+      "primary": "#155EEF",
+      "primary_hover": "#1677FF",
+      "primary_foreground": "#FFFFFF",
+      "accent": "#00C2FF",
+      "accent_foreground": "#020617",
+      "border": "rgba(215, 239, 255, 0.14)",
+      "border_subtle": "rgba(255, 255, 255, 0.08)"
+    }
+  },
+  "effects": {
+    "glows": {
+      "blue_glow": "0 0 25px rgba(0, 140, 255, 0.35)",
+      "electric_glow": "0 0 35px rgba(0, 194, 255, 0.45)",
+      "subtle_blue_glow": "0 0 15px rgba(21, 94, 239, 0.20)"
+    },
+    "glass": {
+      "surface": "rgba(255, 255, 255, 0.05)",
+      "highlight": "rgba(215, 239, 255, 0.10)",
+      "border": "rgba(215, 239, 255, 0.14)",
+      "backdrop_blur": "backdrop-blur-md"
+    }
+  },
+  "typography": {
+    "font_headings": {
+      "family": "Poppins, sans-serif",
+      "class": "font-poppins",
+      "weights": {
+        "semibold": 600,
+        "bold": 700,
+        "extrabold": 800
+      }
+    },
+    "font_body": {
+      "family": "Inter, sans-serif",
+      "class": "font-inter",
+      "weights": {
+        "regular": 400,
+        "medium": 500,
+        "semibold": 600
+      }
+    }
+  },
+  "ui": {
+    "radius": {
+      "sm": "0.375rem",
+      "md": "0.5rem",
+      "lg": "0.75rem",
+      "xl": "1rem",
+      "full": "9999px"
+    },
+    "spacing_grid": "4px"
+  }
+}
