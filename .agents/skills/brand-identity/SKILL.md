@@ -8,6 +8,7 @@ description: >-
 
 **Theme:** Deep Ocean / Electric Blue / Glass  
 **Typography:** Poppins (Headings) + Inter (Body & Subheadings)  
+**Layout:** Full Width (Avoid `max-w-7xl` constraints; use full-width sections with light horizontal padding like `px-4 sm:px-6 lg:px-8`)  
 **Tone:** Data-driven, ROI-focused, elite performance marketing
 
 This skill defines the visual tokens, design constraints, and technical rules for the Google Ads Expert portfolio website. Strictly adhere to these guidelines to ensure visual consistency and high conversion performance.

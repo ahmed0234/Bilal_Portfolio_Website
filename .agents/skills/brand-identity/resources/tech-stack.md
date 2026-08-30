@@ -8,8 +8,8 @@ When generating code, pages, or UI components for this Google Ads Expert portfol
 * **Framework:** Next.js (App Router, React 19, TypeScript)
 * **Styling Engine:** Tailwind CSS v4 (Mandatory. Dark Deep Ocean aesthetic by default)
 * **Motion & Micro-interactions:** Motion (`motion/react` or `motion`)
-* **Component Primitives:** shadcn/ui patterns & Tailwind utility compositions
-* **Icons:** Lucide React (`lucide-react`)
+* **Component Primitives:** Tailwind utility compositions
+* **Icons:** Lucide React (`lucide-react`) & React Icons (`react-icons`)
 
 ---
 
@@ -53,23 +53,28 @@ When generating code, pages, or UI components for this Google Ads Expert portfol
 
 ## Component & Section Guidelines (Google Ads Expert)
 
-1. **Hero Section:**
+1. **Layout & Container Width:**
+   - Always use full width (`w-full`) for sections and page wrappers.
+   - **Do NOT constrain with `max-w-7xl`** or narrow container widths.
+   - Keep sections fluid across the entire screen width with gentle horizontal padding for breathing room (e.g., `px-4 sm:px-6 md:px-8 lg:px-12`).
+2. **Hero Section:**
    - Bold Poppins value proposition focused on high-ROAS Google Ads management, scalable client acquisition, and verified ROI.
    - High-contrast CTA with electric glow effect.
    - Live metrics summary strip (e.g., "$10M+ Ad Spend Managed", "4.8x Avg ROAS", "150+ Campaigns Scaled").
-2. **Case Studies & Proof of Performance:**
+3. **Case Studies & Proof of Performance:**
    - Glassmorphic stat cards showcasing before/after ROAS, CPA reduction, and revenue growth.
-3. **Services Breakdown:**
+4. **Services Breakdown:**
    - Search Ads, Performance Max (PMax), YouTube Ads, Retargeting & Tracking Audits.
-4. **Interactive Audit / Lead Capture:**
+5. **Interactive Audit / Lead Capture:**
    - Clean, conversion-optimized consultation / audit booking card.
-5. **Motion Guidelines:**
+6. **Motion Guidelines:**
    - Smooth entrance reveals (`opacity: 0, y: 20` $\rightarrow$ `opacity: 1, y: 0`).
    - Staggered card displays and hover scaling (`hover:scale-[1.02]`).
 
 ---
 
 ## Forbidden Patterns
+* Do NOT use restrictive container widths like `max-w-7xl` or boxed layouts; keep the design full-width with light horizontal padding.
 * Do NOT use light mode by default; the brand identity is an immersive Deep Ocean dark theme.
 * Do NOT use generic purple or warm-toned gradients unless specifically serving as a secondary contrast accent.
 * Do NOT use un-styled borders; always use glass borders (`rgba(215, 239, 255, 0.14)`).

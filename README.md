@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bilal — Google Ads Expert Portfolio
 
-## Getting Started
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
+[![Theme](https://img.shields.io/badge/Theme-Deep%20Ocean%20%2F%20Glass-00C2FF?style=flat-square)]()
+[![Focus](https://img.shields.io/badge/Niche-Google%20Ads%20%26%20ROAS%20Scaling-155EEF?style=flat-square)]()
 
-First, run the development server:
+A high-converting, performance-driven personal portfolio website for **Bilal**, an elite **Google Ads Specialist & Performance Marketer** dedicated to turning paid traffic into profitable, scalable revenue.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 What Bilal Delivers
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **High-ROAS Google Ads Management:** Scaling Search, Performance Max (PMax), Shopping, and YouTube campaigns.
+- **Precision Targeting & Bidding:** Algorithmic bid strategies, intent-driven keyword modeling, and aggressive negative matching.
+- **Full-Funnel Tracking & Attribution:** Server-side tracking, Google Tag Manager (GTM), GA4, and conversion value optimization.
+- **Profitable Growth Audits:** Uncovering wasted ad spend, reducing CPA, and increasing lifetime customer value.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ⚡ Tech Stack & Design
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework:** Next.js (App Router, React 19, TypeScript)
+- **Styling:** Tailwind CSS v4 (Full width fluid layout with Deep Ocean & Electric Cyan accents)
+- **Visuals:** Modern glassmorphism, glowing micro-interactions, and refined typography (Poppins + Inter)
+- **Motion:** Motion (`motion/react`)
+- **Icons:** Lucide React & React Icons
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
