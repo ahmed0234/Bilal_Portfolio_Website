@@ -97,7 +97,7 @@ export const AnalyticsDashboard: React.FC = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="w-2.5 h-2.5 rounded-full bg-[#00C2FF] shadow-[0_0_10px_#00C2FF]" />
-            <span className="font-inter font-semibold text-sm sm:text-base text-white tracking-tight">
+            <span className="font-inter font-semibold text-base sm:text-[17px] lg:text-lg text-white tracking-tight">
               Performance Overview
             </span>
           </div>
@@ -142,7 +142,7 @@ export const AnalyticsDashboard: React.FC = () => {
       <div className="relative z-10 flex flex-col gap-2 pt-2 border-t border-sky-400/15">
         {/* Header with Title & Peak Badge */}
         <div className="flex items-center justify-between mb-1">
-          <span className="font-inter font-semibold text-sm text-white">
+          <span className="font-inter font-semibold text-base sm:text-[17px] lg:text-lg text-white tracking-tight">
             Conversions
           </span>
           <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-[#0a234e]/85 border border-[#38BDF8]/40 shadow-[0_0_10px_rgba(56,189,248,0.25)]">
@@ -273,7 +273,7 @@ export const AnalyticsDashboard: React.FC = () => {
       {/* 3. BOTTOM SUB-SECTION: Top Campaigns + Radial Efficiency  */}
       {/* ========================================================= */}
       <div className="relative z-10 flex flex-col gap-2.5 pt-3 border-t border-sky-400/15">
-        <span className="font-inter font-semibold text-sm text-white">
+        <span className="font-inter font-semibold text-base sm:text-[17px] lg:text-lg text-white tracking-tight">
           Top Performing Campaigns
         </span>
 

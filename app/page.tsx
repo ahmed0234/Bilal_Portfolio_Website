@@ -6,15 +6,15 @@ import ServicesSection from "@/components/services/ServicesSection";
 const page = () => {
   return (
     <div>
-      {/* Full-viewport wrapper: background covers navbar + hero seamlessly */}
-      <div className="relative w-full min-h-screen md:h-screen md:overflow-hidden bg-[#020617]">
-        {/* Background layer: starts from absolute top, spans full 100vh */}
+      {/* Viewport wrapper: compact on mobile, full-screen lock on desktop */}
+      <div className="relative w-full h-auto md:h-screen md:overflow-hidden bg-[#020617]">
+        {/* Background layer: covers hero area seamlessly */}
         <HeroBackground />
 
-        {/* 10vh Navbar on top of background */}
+        {/* Navbar */}
         <Navbar />
 
-        {/* Hero content: occupies remaining 90vh */}
+        {/* Hero content */}
         <Hero />
       </div>
       <ServicesSection />

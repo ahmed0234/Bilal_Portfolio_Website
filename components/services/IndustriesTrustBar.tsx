@@ -48,7 +48,7 @@ export const IndustriesTrustBar: React.FC = () => {
       <div className="absolute inset-x-8 top-0 h-[1px] bg-gradient-to-r from-transparent via-sky-300/30 to-transparent pointer-events-none" />
 
       {/* Header */}
-      <h3 className="font-poppins font-semibold text-sm sm:text-base text-white text-center mb-6 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
+      <h3 className="font-poppins font-semibold text-base sm:text-lg lg:text-[19px] text-white text-center mb-6 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
         Trusted By Businesses Across Industries
       </h3>
 
@@ -69,10 +69,10 @@ export const IndustriesTrustBar: React.FC = () => {
             >
               {/* 3D Glass Box with Specular Highlight */}
               <div className="relative flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-2xl bg-gradient-to-b from-[#0b2450]/80 via-[#07193b]/85 to-[#030d22]/90 border border-sky-400/25 border-t-sky-300/40 text-[#38BDF8] shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),inset_0_-2px_4px_rgba(0,0,0,0.6),0_4px_14px_rgba(0,0,0,0.5)] group-hover:border-cyan-400/60 group-hover:shadow-[0_0_20px_rgba(0,194,255,0.35)] group-hover:scale-105 transition-all duration-300">
-                <ind.Icon className="w-5 h-5 sm:w-5.5 sm:h-5.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" />
+                <ind.Icon className="w-5.5 h-5.5 sm:w-6 sm:h-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" />
               </div>
-              {/* Industry Title */}
-              <span className="font-inter text-xs font-medium text-slate-300 group-hover:text-white transition-colors text-center leading-tight">
+              {/* Industry Subheading */}
+              <span className="font-inter text-xs sm:text-[13.5px] font-medium text-slate-200 group-hover:text-white transition-colors text-center leading-tight">
                 {ind.name}
               </span>
             </motion.div>

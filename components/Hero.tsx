@@ -117,7 +117,7 @@ const AmbientParticles: React.FC = () => {
 /* ------------------------------------------------------------------ */
 export const Hero: React.FC = () => {
   return (
-    <section className="relative w-full min-h-[90vh] md:h-[90vh] overflow-hidden flex flex-col justify-between items-center text-white">
+    <section className="relative w-full min-h-0 md:min-h-[90vh] md:h-[90vh] overflow-hidden flex flex-col justify-between items-center text-white">
       {/* ========================================================= */}
       {/* AMBIENT SPARKLE/PARTICLE EFFECTS                          */}
       {/* ========================================================= */}

@@ -24,42 +24,42 @@ const services = [
     title: "Account Audit & Strategy",
     description:
       "Deep audit of your account to uncover growth opportunities and build a winning strategy.",
-    icon: <LuSearch className="w-5 h-5 sm:w-5.5 sm:h-5.5" />,
+    icon: <LuSearch className="w-6 h-6 sm:w-6.5 sm:h-6.5" />,
   },
   {
     number: "02",
     title: "Campaign Setup & Management",
     description:
       "High-converting Google Ads campaigns built with precision targeting and proven frameworks.",
-    icon: <LuTarget className="w-5 h-5 sm:w-5.5 sm:h-5.5" />,
+    icon: <LuTarget className="w-6 h-6 sm:w-6.5 sm:h-6.5" />,
   },
   {
     number: "03",
     title: "Optimization & Bid Management",
     description:
       "Continuous optimization to improve performance, reduce costs, and maximize conversions.",
-    icon: <LuChartBarIncreasing className="w-5 h-5 sm:w-5.5 sm:h-5.5" />,
+    icon: <LuChartBarIncreasing className="w-6 h-6 sm:w-6.5 sm:h-6.5" />,
   },
   {
     number: "04",
     title: "Lead Generation & Conversion",
     description:
       "We generate high-quality, pre-qualified leads that turn into paying customers.",
-    icon: <LuUsers className="w-5 h-5 sm:w-5.5 sm:h-5.5" />,
+    icon: <LuUsers className="w-6 h-6 sm:w-6.5 sm:h-6.5" />,
   },
   {
     number: "05",
     title: "Reporting & Insights",
     description:
       "Transparent reporting with real insights so you always know what's working and why.",
-    icon: <LuChartColumn className="w-5 h-5 sm:w-5.5 sm:h-5.5" />,
+    icon: <LuChartColumn className="w-6 h-6 sm:w-6.5 sm:h-6.5" />,
   },
   {
     number: "06",
     title: "Scaling & Growth",
     description:
       "Scale winning campaigns profitably and unlock new opportunities to grow your business.",
-    icon: <LuRocket className="w-5 h-5 sm:w-5.5 sm:h-5.5" />,
+    icon: <LuRocket className="w-6 h-6 sm:w-6.5 sm:h-6.5" />,
   },
 ];
 
@@ -70,7 +70,7 @@ export const ServicesSection: React.FC = () => {
   return (
     <section
       id="services"
-      className="relative w-full bg-[#020617] py-16 sm:py-20 lg:py-24 overflow-hidden select-none"
+      className="relative w-full bg-[#020617] pt-4 pb-16 sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-24 overflow-hidden select-none"
     >
       {/* ========================================================= */}
       {/* AMBIENT BACKGROUND COSMIC GLOW ORBS                       */}
