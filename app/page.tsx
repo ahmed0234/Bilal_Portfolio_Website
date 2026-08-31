@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div>
       {/* Full-viewport wrapper: background covers navbar + hero seamlessly */}
-      <div className="relative w-full h-screen bg-[#020617]">
+      <div className="relative w-full min-h-screen md:h-screen md:overflow-hidden bg-[#020617]">
         {/* Background layer: starts from absolute top, spans full 100vh */}
         <HeroBackground />
 

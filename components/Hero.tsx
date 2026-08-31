@@ -114,12 +114,10 @@ const AmbientParticles: React.FC = () => {
 
 /* ------------------------------------------------------------------ */
 /* Hero Section                                                        */
-/* Background is rendered by the parent (page.tsx) via HeroBackground  */
-/* so it seamlessly covers both the navbar and the hero.               */
 /* ------------------------------------------------------------------ */
 export const Hero: React.FC = () => {
   return (
-    <section className="relative w-full h-[90vh] overflow-hidden flex flex-col items-center text-white">
+    <section className="relative w-full min-h-[90vh] md:h-[90vh] overflow-hidden flex flex-col justify-between items-center text-white">
       {/* ========================================================= */}
       {/* AMBIENT SPARKLE/PARTICLE EFFECTS                          */}
       {/* ========================================================= */}
@@ -128,10 +126,9 @@ export const Hero: React.FC = () => {
       {/* ========================================================= */}
       {/* MAIN CONTENT STACK                                        */}
       {/* ========================================================= */}
-      <div className="relative z-10 flex flex-col items-center w-full h-full">
+      <div className="relative z-10 flex flex-col items-center justify-between w-full h-full">
         {/* ======================================================= */}
         {/* SECTION A: HEADLINE + SUBHEADING (FOREGROUND z-30)      */}
-        {/* Text sits clearly in the foreground, fully readable      */}
         {/* ======================================================= */}
         <div className="relative z-30 flex flex-col items-center text-center w-full px-4 pt-2 sm:pt-4 md:pt-5">
           {/* Primary Headline */}
@@ -143,7 +140,7 @@ export const Hero: React.FC = () => {
               delay: 0.08,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="font-poppins font-bold text-[26px] xs:text-3xl sm:text-4xl md:text-5xl lg:text-[52px] xl:text-[56px] leading-[1.1] tracking-tight text-white max-w-4xl drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]"
+            className="font-poppins font-bold text-2xl xs:text-[28px] sm:text-4xl md:text-5xl lg:text-[52px] xl:text-[56px] leading-[1.15] sm:leading-[1.1] tracking-tight text-white max-w-4xl drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)]"
           >
             Turn Google Searches <br className="hidden sm:inline" />
             Into{" "}
@@ -171,17 +168,12 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* ======================================================= */}
-        {/* SECTION B: 3D PORTRAIT COMPOSITION                      */}
-        {/* The portrait sits BELOW the text, never overlapping it.  */}
-        {/* Cards & icons float around it at z-25, creating depth.   */}
-        {/* The portrait has a negative margin-top to slightly tuck  */}
-        {/* into the text zone for 3D layering, but the text's z-30  */}
-        {/* ensures it stays on top and readable.                    */}
+        {/* SECTION B: 3D PORTRAIT + CARDS + CTA COMPOSITION        */}
         {/* ======================================================= */}
-        <div className="relative z-20 w-full flex-1 flex flex-col items-center min-h-0 px-4 sm:px-6 md:px-8">
+        <div className="relative z-20 w-full flex flex-col items-center justify-center flex-initial md:flex-1 min-h-0 px-3 sm:px-6 md:px-8 mt-1 sm:mt-0">
           {/* Central Stage: portrait + floating elements */}
-          <div className="relative w-full max-w-6xl mx-auto flex justify-center items-start flex-1 min-h-0 -mt-2 sm:-mt-4 md:-mt-6">
-            {/* Central Portrait with 3D depth: foreground presence */}
+          <div className="relative w-full max-w-6xl mx-auto flex justify-center items-center -mt-1 sm:-mt-3 md:-mt-6">
+            {/* Central Portrait with 3D depth */}
             <motion.div
               initial={{ opacity: 0, scale: 0.94, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -196,7 +188,7 @@ export const Hero: React.FC = () => {
                 WebkitMaskImage:
                   "linear-gradient(to bottom, black 0%, black 68%, transparent 92%)",
               }}
-              className="relative z-20 w-[220px] xs:w-[260px] sm:w-[320px] md:w-[380px] lg:w-[420px] xl:w-[450px] select-none pointer-events-none drop-shadow-[0_20px_50px_rgba(0,140,255,0.3)] mt-1 sm:mt-2"
+              className="relative z-20 w-[210px] xs:w-[240px] sm:w-[300px] md:w-[380px] lg:w-[420px] xl:w-[450px] select-none pointer-events-none drop-shadow-[0_20px_50px_rgba(0,140,255,0.3)] mt-1 sm:mt-2"
             >
               {/* Subtle glow ring behind the portrait for 3D pop */}
               <div className="absolute inset-0 -m-3 sm:-m-4 rounded-full bg-[radial-gradient(ellipse_50%_50%_at_50%_35%,rgba(0,194,255,0.08)_0%,transparent_70%)] pointer-events-none" />
@@ -213,8 +205,7 @@ export const Hero: React.FC = () => {
             </motion.div>
 
             {/* ===================================================== */}
-            {/* FLOATING PERFORMANCE CARDS (z-25, between text & BG)   */}
-            {/* Strong floating animation with varied timing          */}
+            {/* FLOATING PERFORMANCE CARDS                             */}
             {/* ===================================================== */}
 
             {/* TOP-LEFT CARD: ROAS */}
@@ -231,7 +222,7 @@ export const Hero: React.FC = () => {
                   times: [0, 0.3, 0.55, 0.8, 1],
                 },
               }}
-              className="absolute z-25 left-0 sm:left-2 md:left-6 lg:left-14 xl:left-22 top-[8%] sm:top-[10%] md:top-[12%]"
+              className="absolute z-25 left-1 xs:left-2 sm:left-4 md:left-6 lg:left-14 xl:left-22 top-[5%] sm:top-[8%] md:top-[12%]"
             >
               <PerformanceCard
                 title="ROAS"
@@ -257,7 +248,7 @@ export const Hero: React.FC = () => {
                   times: [0, 0.35, 0.6, 0.85, 1],
                 },
               }}
-              className="absolute z-25 left-2 sm:left-6 md:left-12 lg:left-22 xl:left-28 top-[42%] sm:top-[44%] md:top-[46%]"
+              className="absolute z-25 left-2 xs:left-3 sm:left-6 md:left-12 lg:left-22 xl:left-28 top-[48%] sm:top-[46%] md:top-[46%]"
             >
               <PerformanceCard
                 title="Conversions"
@@ -283,7 +274,7 @@ export const Hero: React.FC = () => {
                   times: [0, 0.32, 0.58, 0.82, 1],
                 },
               }}
-              className="absolute z-25 right-0 sm:right-2 md:right-6 lg:right-14 xl:right-22 top-[8%] sm:top-[10%] md:top-[12%]"
+              className="absolute z-25 right-1 xs:right-2 sm:right-4 md:right-6 lg:right-14 xl:right-22 top-[5%] sm:top-[8%] md:top-[12%]"
             >
               <PerformanceCard
                 title="Revenue"
@@ -309,7 +300,7 @@ export const Hero: React.FC = () => {
                   times: [0, 0.28, 0.55, 0.83, 1],
                 },
               }}
-              className="absolute z-25 right-2 sm:right-6 md:right-12 lg:right-22 xl:right-28 top-[42%] sm:top-[44%] md:top-[46%]"
+              className="absolute z-25 right-2 xs:right-3 sm:right-6 md:right-12 lg:right-22 xl:right-28 top-[48%] sm:top-[46%] md:top-[46%]"
             >
               <PerformanceCard
                 title="CTR"
@@ -321,8 +312,7 @@ export const Hero: React.FC = () => {
             </motion.div>
 
             {/* ===================================================== */}
-            {/* FLOATING ORBITAL ICONS (z-25, strong floating motion) */}
-            {/* Each has unique duration + offset for organic feel     */}
+            {/* FLOATING ORBITAL ICONS                                 */}
             {/* ===================================================== */}
 
             {/* Upper-Left Users Icon */}
@@ -399,7 +389,7 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* ======================================================= */}
-          {/* CTA BUTTONS: Positioned over the portrait fade zone     */}
+          {/* CTA BUTTONS: Directly attached over lower portrait torso*/}
           {/* ======================================================= */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
@@ -409,12 +399,12 @@ export const Hero: React.FC = () => {
               delay: 0.35,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="relative z-30 flex flex-row items-center justify-center gap-3 sm:gap-4 -mt-6 xs:-mt-8 sm:-mt-10 md:-mt-12 w-full"
+            className="relative z-30 flex flex-row items-center justify-center gap-2.5 xs:gap-3 sm:gap-4 -mt-8 xs:-mt-10 sm:-mt-12 md:-mt-14 w-full px-2"
           >
             {/* Primary 3D CTA: Book a Strategy Call */}
             <a
               href="#contact"
-              className="group relative inline-flex items-center justify-center gap-2 sm:gap-2.5 px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-xl text-white font-inter font-medium text-xs sm:text-sm tracking-wide bg-gradient-to-b from-[#2982FF] via-[#1677FF] to-[#074ec4] border border-sky-400/35 border-t-sky-200/70 shadow-[inset_0_1px_1px_rgba(255,255,255,0.45),inset_0_-2px_4px_rgba(0,0,0,0.45),0_6px_22px_rgba(22,119,255,0.6),0_14px_30px_rgba(0,0,0,0.65)] hover:from-[#3a8eff] hover:to-[#1065e0] hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.55),0_8px_28px_rgba(0,194,255,0.75),0_16px_34px_rgba(0,0,0,0.7)] active:scale-[0.98] transition-all duration-300 cursor-pointer overflow-hidden"
+              className="group relative inline-flex items-center justify-center gap-1.5 xs:gap-2 sm:gap-2.5 px-4 xs:px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-xl text-white font-inter font-medium text-[11px] xs:text-xs sm:text-sm tracking-wide bg-gradient-to-b from-[#2982FF] via-[#1677FF] to-[#074ec4] border border-sky-400/35 border-t-sky-200/70 shadow-[inset_0_1px_1px_rgba(255,255,255,0.45),inset_0_-2px_4px_rgba(0,0,0,0.45),0_6px_22px_rgba(22,119,255,0.6),0_14px_30px_rgba(0,0,0,0.65)] hover:from-[#3a8eff] hover:to-[#1065e0] hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.55),0_8px_28px_rgba(0,194,255,0.75),0_16px_34px_rgba(0,0,0,0.7)] active:scale-[0.98] transition-all duration-300 cursor-pointer overflow-hidden"
             >
               <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/70 to-transparent pointer-events-none" />
               <LuCalendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]" />
@@ -426,7 +416,7 @@ export const Hero: React.FC = () => {
             {/* Secondary 3D Glass CTA: View Results */}
             <a
               href="#case-studies"
-              className="group relative inline-flex items-center justify-center gap-2 sm:gap-2.5 px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-xl text-white font-inter font-medium text-xs sm:text-sm tracking-wide bg-gradient-to-b from-[#0e244d]/90 via-[#071735]/90 to-[#040e22]/95 backdrop-blur-xl border border-sky-400/25 border-t-sky-300/45 shadow-[inset_0_1px_1.5px_rgba(215,239,255,0.28),inset_0_-2px_4px_rgba(0,0,0,0.55),0_6px_18px_rgba(0,0,0,0.55),0_0_16px_rgba(21,94,239,0.18)] hover:bg-[#0c224a] hover:border-cyan-400/50 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.4),0_0_24px_rgba(0,194,255,0.38)] active:scale-[0.98] transition-all duration-300 cursor-pointer overflow-hidden"
+              className="group relative inline-flex items-center justify-center gap-1.5 xs:gap-2 sm:gap-2.5 px-4 xs:px-5 sm:px-7 py-2.5 sm:py-3.5 rounded-xl text-white font-inter font-medium text-[11px] xs:text-xs sm:text-sm tracking-wide bg-gradient-to-b from-[#0e244d]/90 via-[#071735]/90 to-[#040e22]/95 backdrop-blur-xl border border-sky-400/25 border-t-sky-300/45 shadow-[inset_0_1px_1.5px_rgba(215,239,255,0.28),inset_0_-2px_4px_rgba(0,0,0,0.55),0_6px_18px_rgba(0,0,0,0.55),0_0_16px_rgba(21,94,239,0.18)] hover:bg-[#0c224a] hover:border-cyan-400/50 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.4),0_0_24px_rgba(0,194,255,0.38)] active:scale-[0.98] transition-all duration-300 cursor-pointer overflow-hidden"
             >
               <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-sky-300/50 to-transparent pointer-events-none" />
               <LuTrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-sky-400 group-hover:text-cyan-300 transition-colors drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]" />
@@ -440,7 +430,7 @@ export const Hero: React.FC = () => {
         {/* ======================================================= */}
         {/* SECTION C: BOTTOM TRUST / PROOF BAR                     */}
         {/* ======================================================= */}
-        <div className="relative z-30 w-full px-4 sm:px-6 md:px-8 lg:px-12 pt-3 sm:pt-4 pb-3 sm:pb-4">
+        <div className="relative z-30 w-full px-3 sm:px-6 md:px-8 lg:px-12 mt-3 sm:mt-4 md:mt-0 pt-2 sm:pt-3 pb-3 sm:pb-4">
           <TrustBar />
         </div>
       </div>
