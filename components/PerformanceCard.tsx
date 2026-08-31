@@ -65,7 +65,7 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -4, scale: 1.03 }}
-      className={`relative w-[130px] xs:w-[145px] sm:w-[155px] md:w-[168px] rounded-xl sm:rounded-2xl bg-gradient-to-b from-[#0b2046]/85 via-[#061430]/85 to-[#030a1c]/90 backdrop-blur-xl border border-sky-400/25 border-t-sky-300/40 p-2.5 xs:p-3 sm:p-3.5 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.22),inset_0_-2px_4px_rgba(0,0,0,0.5),0_14px_36px_rgba(0,5,20,0.8),0_0_24px_rgba(0,140,255,0.16)] hover:border-cyan-400/50 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.3),0_16px_40px_rgba(0,5,25,0.85),0_0_30px_rgba(0,194,255,0.28)] transition-all duration-300 select-none overflow-hidden ${className}`}
+      className={`relative w-[130px] xs:w-[145px] sm:w-[155px] md:w-[168px] rounded-xl sm:rounded-2xl bg-gradient-to-b from-[#0b2046]/85 via-[#061430]/85 to-[#030a1c]/90 backdrop-blur-xl border border-sky-400/25 border-t-sky-300/40 p-2.5 xs:p-3 sm:p-3.5 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.22),inset_0_-2px_4px_rgba(0,0,0,0.5),0_14px_36px_rgba(0,5,20,0.8),0_0_24px_rgba(0,140,255,0.16)] hover:border-cyan-400/50 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.3),0_16px_40px_rgba(0,5,25,0.85),0_0_30px_rgba(0,194,255,0.28)] transition-all duration-300 overflow-hidden ${className}`}
     >
       {/* Top Glass Luminous Highlight Reflection */}
       <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-sky-300/60 to-transparent pointer-events-none" />

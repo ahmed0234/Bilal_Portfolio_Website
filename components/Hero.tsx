@@ -119,7 +119,7 @@ const AmbientParticles: React.FC = () => {
 /* ------------------------------------------------------------------ */
 export const Hero: React.FC = () => {
   return (
-    <section className="relative w-full h-[90vh] overflow-hidden flex flex-col items-center text-white select-none">
+    <section className="relative w-full h-[90vh] overflow-hidden flex flex-col items-center text-white">
       {/* ========================================================= */}
       {/* AMBIENT SPARKLE/PARTICLE EFFECTS                          */}
       {/* ========================================================= */}
@@ -148,7 +148,7 @@ export const Hero: React.FC = () => {
             Turn Google Searches <br className="hidden sm:inline" />
             Into{" "}
             <span className="bg-gradient-to-r from-[#00C2FF] via-[#38BDF8] to-[#155EEF] bg-clip-text text-transparent">
-              High-Value
+              High Value
             </span>{" "}
             Customers.
           </motion.h1>
@@ -162,10 +162,10 @@ export const Hero: React.FC = () => {
               delay: 0.16,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-[15px] lg:text-base text-slate-300/90 font-inter font-normal leading-relaxed max-w-xl sm:max-w-2xl text-balance drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+            className="mt-2 sm:mt-3 text-xs sm:text-sm md:text-[15px] lg:text-base text-slate-100/90 font-inter font-normal leading-relaxed max-w-xl sm:max-w-2xl text-balance drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
           >
             I help businesses generate qualified leads, increase ROAS, and scale
-            profitably with data-driven Google Ads strategies that deliver real
+            profitably with data driven Google Ads strategies that deliver real
             results.
           </motion.p>
         </div>

@@ -4,7 +4,7 @@ export const GooglePartnerLogo: React.FC<{ className?: string }> = ({
   className = "",
 }) => {
   return (
-    <div className={`flex items-center gap-1.5 select-none ${className}`}>
+    <div className={`flex items-center gap-1.5 ${className}`}>
       <span className="font-poppins font-semibold text-lg sm:text-xl tracking-tight">
         <span className="text-[#4285F4]">G</span>
         <span className="text-[#EA4335]">o</span>

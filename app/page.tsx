@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import HeroBackground from "@/components/HeroBackground";
+import Navbar from "@/components/Navbar";
 
 const page = () => {
   return (
@@ -9,8 +10,8 @@ const page = () => {
         {/* Background layer: starts from absolute top, spans full 100vh */}
         <HeroBackground />
 
-        {/* Transparent navbar placeholder: sits on top of background */}
-        <nav className="relative z-40 h-[10vh]"></nav>
+        {/* 10vh Navbar on top of background */}
+        <Navbar />
 
         {/* Hero content: occupies remaining 90vh */}
         <Hero />
