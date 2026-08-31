@@ -188,7 +188,7 @@ export const Hero: React.FC = () => {
                 WebkitMaskImage:
                   "linear-gradient(to bottom, black 0%, black 68%, transparent 92%)",
               }}
-              className="relative z-20 w-[210px] xs:w-[240px] sm:w-[300px] md:w-[380px] lg:w-[420px] xl:w-[450px] select-none pointer-events-none drop-shadow-[0_20px_50px_rgba(0,140,255,0.3)] mt-1 sm:mt-2"
+              className="relative z-20 w-[245px] xs:w-[275px] sm:w-[320px] md:w-[380px] lg:w-[420px] xl:w-[450px] select-none pointer-events-none drop-shadow-[0_20px_50px_rgba(0,140,255,0.3)] mt-1 sm:mt-2"
             >
               {/* Subtle glow ring behind the portrait for 3D pop */}
               <div className="absolute inset-0 -m-3 sm:-m-4 rounded-full bg-[radial-gradient(ellipse_50%_50%_at_50%_35%,rgba(0,194,255,0.08)_0%,transparent_70%)] pointer-events-none" />
@@ -222,7 +222,7 @@ export const Hero: React.FC = () => {
                   times: [0, 0.3, 0.55, 0.8, 1],
                 },
               }}
-              className="absolute z-25 left-1 xs:left-2 sm:left-4 md:left-6 lg:left-14 xl:left-22 top-[5%] sm:top-[8%] md:top-[12%]"
+              className="absolute z-25 left-0 xs:left-1 sm:left-4 md:left-6 lg:left-14 xl:left-22 top-[5%] sm:top-[8%] md:top-[12%]"
             >
               <PerformanceCard
                 title="ROAS"
@@ -248,7 +248,7 @@ export const Hero: React.FC = () => {
                   times: [0, 0.35, 0.6, 0.85, 1],
                 },
               }}
-              className="absolute z-25 left-2 xs:left-3 sm:left-6 md:left-12 lg:left-22 xl:left-28 top-[48%] sm:top-[46%] md:top-[46%]"
+              className="absolute z-25 left-0 xs:left-1 sm:left-6 md:left-12 lg:left-22 xl:left-28 top-[48%] sm:top-[46%] md:top-[46%]"
             >
               <PerformanceCard
                 title="Conversions"
@@ -274,7 +274,7 @@ export const Hero: React.FC = () => {
                   times: [0, 0.32, 0.58, 0.82, 1],
                 },
               }}
-              className="absolute z-25 right-1 xs:right-2 sm:right-4 md:right-6 lg:right-14 xl:right-22 top-[5%] sm:top-[8%] md:top-[12%]"
+              className="absolute z-25 right-0 xs:right-1 sm:right-4 md:right-6 lg:right-14 xl:right-22 top-[5%] sm:top-[8%] md:top-[12%]"
             >
               <PerformanceCard
                 title="Revenue"
@@ -300,7 +300,7 @@ export const Hero: React.FC = () => {
                   times: [0, 0.28, 0.55, 0.83, 1],
                 },
               }}
-              className="absolute z-25 right-2 xs:right-3 sm:right-6 md:right-12 lg:right-22 xl:right-28 top-[48%] sm:top-[46%] md:top-[46%]"
+              className="absolute z-25 right-0 xs:right-1 sm:right-6 md:right-12 lg:right-22 xl:right-28 top-[48%] sm:top-[46%] md:top-[46%]"
             >
               <PerformanceCard
                 title="CTR"

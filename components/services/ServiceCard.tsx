@@ -44,13 +44,13 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 
       {/* Text Content */}
       <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-2.5 mb-1">
+        <div className="flex items-center gap-2 sm:gap-2.5 mb-1">
           {/* Number Tag */}
-          <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-md text-xs sm:text-[13px] font-inter font-bold tracking-tight text-[#38BDF8] bg-sky-400/10 border border-sky-400/30 shrink-0">
+          <span className="inline-flex items-center justify-center px-1.5 sm:px-2 py-0.5 rounded-md text-[11px] sm:text-[13px] font-inter font-bold tracking-tight text-[#38BDF8] bg-sky-400/10 border border-sky-400/30 shrink-0">
             {number}
           </span>
           {/* Service Card Heading */}
-          <h3 className="font-poppins font-semibold text-base sm:text-[17px] lg:text-[18.5px] text-white tracking-tight group-hover:text-sky-100 transition-colors truncate">
+          <h3 className="font-poppins font-semibold text-[13.5px] xs:text-sm sm:text-[17px] lg:text-[18.5px] text-white tracking-tight group-hover:text-sky-100 transition-colors truncate">
             {title}
           </h3>
         </div>

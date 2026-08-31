@@ -3,18 +3,18 @@
 import React from "react";
 import { motion } from "motion/react";
 import {
+  LuShovel,
+  LuFan,
   LuHouse,
-  LuShoppingCart,
+  LuPaintbrush,
+  LuHardHat,
   LuHeartPulse,
-  LuCloud,
+  LuShoppingCart,
   LuBuilding2,
-  LuGraduationCap,
-  LuScale,
-  LuBanknote,
 } from "react-icons/lu";
 
 /* ------------------------------------------------------------------ */
-/* Industry Data Definitions                                          */
+/* Industry Data Definitions (Target Industries)                       */
 /* ------------------------------------------------------------------ */
 interface IndustryItem {
   name: string;
@@ -22,14 +22,14 @@ interface IndustryItem {
 }
 
 const industries: IndustryItem[] = [
-  { name: "Home Services", Icon: LuHouse },
-  { name: "Ecommerce", Icon: LuShoppingCart },
+  { name: "Hardscaping", Icon: LuShovel },
+  { name: "HVAC", Icon: LuFan },
+  { name: "Roofing", Icon: LuHouse },
+  { name: "Home Remodeling & Renovation", Icon: LuPaintbrush },
+  { name: "General Home Contracting", Icon: LuHardHat },
   { name: "Healthcare", Icon: LuHeartPulse },
-  { name: "SaaS", Icon: LuCloud },
+  { name: "Ecommerce", Icon: LuShoppingCart },
   { name: "Real Estate", Icon: LuBuilding2 },
-  { name: "Education", Icon: LuGraduationCap },
-  { name: "Legal", Icon: LuScale },
-  { name: "Finance", Icon: LuBanknote },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -47,13 +47,16 @@ export const IndustriesTrustBar: React.FC = () => {
       {/* Top Specular Glint Line */}
       <div className="absolute inset-x-8 top-0 h-[1px] bg-gradient-to-r from-transparent via-sky-300/30 to-transparent pointer-events-none" />
 
+      {/* Center Vertical Separator on Mobile (between column 1 and column 2) */}
+      <div className="block sm:hidden absolute left-1/2 top-20 bottom-6 w-[1px] -translate-x-1/2 bg-gradient-to-b from-transparent via-sky-400/20 to-transparent pointer-events-none" />
+
       {/* Header */}
       <h3 className="font-poppins font-semibold text-base sm:text-lg lg:text-[19px] text-white text-center mb-6 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
         Trusted By Businesses Across Industries
       </h3>
 
       {/* 8 Industry Columns with Vertical Dividers */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 lg:flex lg:flex-row lg:items-center lg:justify-between gap-4 sm:gap-6 lg:gap-0">
+      <div className="relative grid grid-cols-2 sm:grid-cols-4 lg:flex lg:flex-row lg:items-center lg:justify-between gap-y-5 gap-x-4 sm:gap-6 lg:gap-0">
         {industries.map((ind, i) => (
           <React.Fragment key={ind.name}>
             <motion.div
@@ -65,14 +68,14 @@ export const IndustriesTrustBar: React.FC = () => {
                 delay: 0.04 * i,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="flex-1 flex flex-col items-center gap-2.5 group cursor-default"
+              className="flex-1 flex flex-col items-center gap-2.5 group cursor-default px-2"
             >
               {/* 3D Glass Box with Specular Highlight */}
               <div className="relative flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-2xl bg-gradient-to-b from-[#0b2450]/80 via-[#07193b]/85 to-[#030d22]/90 border border-sky-400/25 border-t-sky-300/40 text-[#38BDF8] shadow-[inset_0_1px_1px_rgba(255,255,255,0.2),inset_0_-2px_4px_rgba(0,0,0,0.6),0_4px_14px_rgba(0,0,0,0.5)] group-hover:border-cyan-400/60 group-hover:shadow-[0_0_20px_rgba(0,194,255,0.35)] group-hover:scale-105 transition-all duration-300">
                 <ind.Icon className="w-5.5 h-5.5 sm:w-6 sm:h-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]" />
               </div>
               {/* Industry Subheading */}
-              <span className="font-inter text-xs sm:text-[13.5px] font-medium text-slate-200 group-hover:text-white transition-colors text-center leading-tight">
+              <span className="font-inter text-xs sm:text-[13.5px] font-medium text-slate-200 group-hover:text-white transition-colors text-center leading-tight max-w-[140px] sm:max-w-none">
                 {ind.name}
               </span>
             </motion.div>

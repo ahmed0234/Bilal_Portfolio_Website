@@ -65,28 +65,28 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -4, scale: 1.03 }}
-      className={`relative w-[130px] xs:w-[145px] sm:w-[155px] md:w-[168px] rounded-xl sm:rounded-2xl bg-gradient-to-b from-[#0b2046]/85 via-[#061430]/85 to-[#030a1c]/90 backdrop-blur-xl border border-sky-400/25 border-t-sky-300/40 p-2.5 xs:p-3 sm:p-3.5 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.22),inset_0_-2px_4px_rgba(0,0,0,0.5),0_14px_36px_rgba(0,5,20,0.8),0_0_24px_rgba(0,140,255,0.16)] hover:border-cyan-400/50 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.3),0_16px_40px_rgba(0,5,25,0.85),0_0_30px_rgba(0,194,255,0.28)] transition-all duration-300 overflow-hidden ${className}`}
+      className={`relative w-[100px] xs:w-[115px] sm:w-[155px] md:w-[168px] rounded-xl sm:rounded-2xl bg-gradient-to-b from-[#0b2046]/85 via-[#061430]/85 to-[#030a1c]/90 backdrop-blur-xl border border-sky-400/25 border-t-sky-300/40 p-2 xs:p-2.5 sm:p-3.5 shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.22),inset_0_-2px_4px_rgba(0,0,0,0.5),0_14px_36px_rgba(0,5,20,0.8),0_0_24px_rgba(0,140,255,0.16)] hover:border-cyan-400/50 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.3),0_16px_40px_rgba(0,5,25,0.85),0_0_30px_rgba(0,194,255,0.28)] transition-all duration-300 overflow-hidden ${className}`}
     >
       {/* Top Glass Luminous Highlight Reflection */}
       <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-sky-300/60 to-transparent pointer-events-none" />
 
       {/* Top Row: Title + Mini Action Icon */}
-      <div className="flex items-center justify-between mb-1">
-        <span className="text-[10px] xs:text-[11px] sm:text-xs font-medium text-slate-400 font-inter tracking-wide">
+      <div className="flex items-center justify-between mb-0.5 sm:mb-1">
+        <span className="text-[9px] xs:text-[10px] sm:text-xs font-medium text-slate-400 font-inter tracking-wide">
           {title}
         </span>
         {/* Subtle data/expand icon matching reference */}
         <div className="text-sky-400/70 hover:text-cyan-300 transition-colors">
           <svg
-            width="11"
-            height="11"
+            width="10"
+            height="10"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="sm:w-3 sm:h-3"
+            className="w-2.5 h-2.5 sm:w-3 sm:h-3"
           >
             <path d="M4 14l6-6" />
             <path d="M20 10l-6 6" />
@@ -97,20 +97,20 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({
       </div>
 
       {/* Main Metric Value */}
-      <div className="text-base xs:text-lg sm:text-xl font-bold font-poppins text-white tracking-tight leading-none mb-1.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+      <div className="text-sm xs:text-base sm:text-xl font-bold font-poppins text-white tracking-tight leading-none mb-1 sm:mb-1.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
         {value}
       </div>
 
       {/* Bottom Row: Percentage Growth + Sparkline Chart */}
-      <div className="flex items-end justify-between gap-1 pt-0.5">
+      <div className="flex items-end justify-between gap-0.5 sm:gap-1 pt-0.5">
         {/* Growth Tag */}
-        <div className="flex items-center gap-0.5 sm:gap-1 text-[10px] xs:text-[11px] font-semibold text-emerald-400">
-          <FaArrowTrendUp className="w-2.5 h-2.5 sm:w-2.5 sm:h-2.5 text-emerald-400" />
+        <div className="flex items-center gap-0.5 sm:gap-1 text-[8.5px] xs:text-[9.5px] sm:text-[11px] font-semibold text-emerald-400 leading-none">
+          <FaArrowTrendUp className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-emerald-400 shrink-0" />
           <span>{change}</span>
         </div>
 
         {/* Sparkline Chart */}
-        <div className="relative w-12 xs:w-14 sm:w-16 h-5">
+        <div className="relative w-9 xs:w-11 sm:w-16 h-3.5 xs:h-4 sm:h-5 shrink-0">
           <svg
             viewBox="0 0 106 30"
             fill="none"

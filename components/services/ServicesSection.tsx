@@ -70,7 +70,7 @@ export const ServicesSection: React.FC = () => {
   return (
     <section
       id="services"
-      className="relative w-full bg-[#020617] pt-4 pb-16 sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-24 overflow-hidden select-none"
+      className="relative w-full bg-[#020617] pt-4 pb-16 sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-24 overflow-hidden"
     >
       {/* ========================================================= */}
       {/* AMBIENT BACKGROUND COSMIC GLOW ORBS                       */}

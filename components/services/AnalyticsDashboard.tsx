@@ -158,7 +158,7 @@ export const AnalyticsDashboard: React.FC = () => {
         {/* Chart Layout: Y-Axis + SVG Grid */}
         <div className="flex gap-2">
           {/* Y-Axis Labels */}
-          <div className="flex flex-col justify-between text-[10px] font-inter text-slate-400 py-1 shrink-0 w-6 text-right select-none">
+          <div className="flex flex-col justify-between text-[10px] font-inter text-slate-400 py-1 shrink-0 w-6 text-right">
             <span>5K</span>
             <span>4K</span>
             <span>3K</span>
@@ -259,7 +259,7 @@ export const AnalyticsDashboard: React.FC = () => {
         </div>
 
         {/* X-Axis Date Labels */}
-        <div className="flex justify-between pl-8 pr-1 text-[10px] font-inter text-slate-400 select-none">
+        <div className="flex justify-between pl-8 pr-1 text-[10px] font-inter text-slate-400">
           <span>Apr 26</span>
           <span>May 3</span>
           <span>May 10</span>
