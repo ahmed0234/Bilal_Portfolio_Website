@@ -12,7 +12,7 @@ import {
 import { FiBarChart2 } from "react-icons/fi";
 
 /* ------------------------------------------------------------------ */
-/* Data                                                                */
+/* Data Definitions                                                    */
 /* ------------------------------------------------------------------ */
 const metrics = [
   {
@@ -46,7 +46,7 @@ const campaigns = [
   {
     name: "Performance Max",
     value: "3.24K",
-    color: "#EA4335",
+    color: "#FF5722",
     width: "65%",
   },
   {
@@ -64,62 +64,70 @@ const campaigns = [
 ];
 
 /* ------------------------------------------------------------------ */
-/* SVG chart paths — Conversions area chart                            */
+/* Smooth Dynamic Chart Curve Paths                                   */
 /* ------------------------------------------------------------------ */
 const chartLinePath =
-  "M 0 155 C 30 148 50 140 80 132 C 100 126 108 140 125 128 C 145 116 155 108 180 100 C 200 92 210 105 235 88 C 258 72 268 78 290 62 C 312 46 322 52 345 38 C 365 24 380 20 400 15";
-const chartAreaPath = `${chartLinePath} L 400 180 L 0 180 Z`;
+  "M 0 140 C 25 135 45 130 70 120 C 95 110 105 125 125 115 C 145 105 155 95 180 88 C 205 80 215 95 240 78 C 265 60 275 68 300 52 C 325 36 335 42 360 26 C 375 16 388 12 400 8";
+const chartAreaPath = `${chartLinePath} L 400 160 L 0 160 Z`;
 
 /* ------------------------------------------------------------------ */
-/* AnalyticsDashboard Component                                        */
+/* Unified Analytics Dashboard Component                              */
 /* ------------------------------------------------------------------ */
-const AnalyticsDashboard: React.FC = () => {
+export const AnalyticsDashboard: React.FC = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 30 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      className="flex flex-col gap-4 sm:gap-5"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+      className="relative rounded-2xl bg-gradient-to-b from-[#071a3c]/85 via-[#030d22]/85 to-[#020617]/95 backdrop-blur-2xl border border-sky-400/25 border-t-sky-300/40 p-5 sm:p-6 lg:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.7),inset_0_1px_2px_rgba(255,255,255,0.15),0_0_40px_rgba(0,140,255,0.08)] overflow-hidden flex flex-col justify-between gap-5 sm:gap-6 h-full"
     >
-      {/* ============================================== */}
-      {/* PANEL 1: Performance Overview                  */}
-      {/* ============================================== */}
-      <div className="relative rounded-xl bg-[#06132B]/70 backdrop-blur-md border border-[rgba(215,239,255,0.12)] p-4 sm:p-5 overflow-hidden">
-        {/* Top specular line */}
-        <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-sky-300/15 to-transparent pointer-events-none" />
+      {/* Top Specular Glint Line */}
+      <div className="absolute inset-x-8 top-0 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
 
-        {/* Header row */}
-        <div className="flex items-center justify-between mb-4">
+      {/* Subtle Ambient Radial Glow */}
+      <div className="absolute -top-20 -right-20 w-64 h-64 bg-[#00C2FF]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-[#155EEF]/10 rounded-full blur-3xl pointer-events-none" />
+
+      {/* ========================================================= */}
+      {/* 1. TOP SUB-SECTION: Performance Overview + 4 Metric Cards */}
+      {/* ========================================================= */}
+      <div className="relative z-10 flex flex-col gap-3.5">
+        {/* Header Bar */}
+        <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-[#00C2FF] shadow-[0_0_8px_#00C2FF]" />
-            <span className="font-inter font-semibold text-sm text-white">
+            <div className="w-2.5 h-2.5 rounded-full bg-[#00C2FF] shadow-[0_0_10px_#00C2FF]" />
+            <span className="font-inter font-semibold text-sm sm:text-base text-white tracking-tight">
               Performance Overview
             </span>
           </div>
-          <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#081B3A]/80 border border-sky-200/10 text-[11px] font-inter text-slate-400">
-            Last 30 Days
-            <LuChevronDown className="w-3 h-3" />
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#081B3A]/80 border border-sky-300/20 text-xs font-inter text-slate-300 shadow-sm cursor-pointer hover:border-cyan-400/40 transition-colors">
+            <span>Last 30 Days</span>
+            <LuChevronDown className="w-3.5 h-3.5 text-slate-400" />
           </div>
         </div>
 
-        {/* 4 Metric Cards */}
+        {/* 4 Metric 3D Glass Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
           {metrics.map((m, i) => (
             <div
               key={i}
-              className="flex flex-col items-center p-3 sm:p-3.5 rounded-lg bg-[#081B3A]/50 border border-sky-200/[0.08] hover:border-sky-400/20 transition-colors duration-200"
+              className="group relative flex flex-col items-center p-3 sm:p-3.5 rounded-xl bg-gradient-to-b from-[#0b2450]/60 to-[#040f26]/80 border border-sky-400/20 border-t-sky-300/35 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_4px_12px_rgba(0,0,0,0.4)] hover:border-cyan-400/40 transition-all duration-200"
             >
-              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#0B2A5B]/60 text-[#38BDF8] mb-2">
+              {/* Mini Luminous Orb Icon */}
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-b from-[#133d7d] to-[#061738] border border-sky-400/40 text-[#38BDF8] shadow-[0_0_10px_rgba(0,194,255,0.3)] mb-2 group-hover:scale-105 transition-transform">
                 <m.Icon className="w-4 h-4" />
               </div>
-              <span className="font-poppins font-bold text-base sm:text-lg text-white leading-none">
+              {/* Value */}
+              <span className="font-poppins font-bold text-lg sm:text-xl text-white tracking-tight leading-none">
                 {m.value}
               </span>
-              <span className="font-inter text-[11px] text-slate-400 mt-0.5">
+              {/* Label */}
+              <span className="font-inter text-[11px] text-slate-400 mt-1">
                 {m.label}
               </span>
-              <span className="flex items-center gap-0.5 mt-1.5 text-[10px] sm:text-[11px] font-inter font-medium text-emerald-400">
+              {/* Growth Stat */}
+              <span className="flex items-center gap-0.5 mt-1.5 text-[11px] font-inter font-semibold text-[#10B981] drop-shadow-[0_0_6px_rgba(16,185,129,0.3)]">
                 <LuTrendingUp className="w-3 h-3" />
                 {m.change}
               </span>
@@ -128,23 +136,29 @@ const AnalyticsDashboard: React.FC = () => {
         </div>
       </div>
 
-      {/* ============================================== */}
-      {/* PANEL 2: Conversions Chart                     */}
-      {/* ============================================== */}
-      <div className="relative rounded-xl bg-[#06132B]/70 backdrop-blur-md border border-[rgba(215,239,255,0.12)] p-4 sm:p-5 overflow-hidden">
-        <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-sky-300/15 to-transparent pointer-events-none" />
-
-        {/* Header */}
-        <div className="flex items-center justify-between mb-3 sm:mb-4">
+      {/* ========================================================= */}
+      {/* 2. MIDDLE SUB-SECTION: Conversions Area Chart             */}
+      {/* ========================================================= */}
+      <div className="relative z-10 flex flex-col gap-2 pt-2 border-t border-sky-400/15">
+        {/* Header with Title & Peak Badge */}
+        <div className="flex items-center justify-between mb-1">
           <span className="font-inter font-semibold text-sm text-white">
             Conversions
           </span>
+          <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-[#0a234e]/85 border border-[#38BDF8]/40 shadow-[0_0_10px_rgba(56,189,248,0.25)]">
+            <span className="text-xs font-inter font-bold text-[#38BDF8]">
+              4.52K
+            </span>
+            <span className="text-[10px] font-inter text-slate-300">
+              Conversions
+            </span>
+          </div>
         </div>
 
-        {/* Y-axis + Chart */}
-        <div className="flex gap-1.5 sm:gap-2">
-          {/* Y-axis labels */}
-          <div className="flex flex-col justify-between text-[9px] sm:text-[10px] font-inter text-slate-500 py-0.5 shrink-0 w-6 sm:w-7 text-right">
+        {/* Chart Layout: Y-Axis + SVG Grid */}
+        <div className="flex gap-2">
+          {/* Y-Axis Labels */}
+          <div className="flex flex-col justify-between text-[10px] font-inter text-slate-400 py-1 shrink-0 w-6 text-right select-none">
             <span>5K</span>
             <span>4K</span>
             <span>3K</span>
@@ -153,36 +167,39 @@ const AnalyticsDashboard: React.FC = () => {
             <span>0</span>
           </div>
 
-          {/* Chart SVG */}
+          {/* SVG Area Chart */}
           <div className="flex-1 relative">
             <svg
-              viewBox="0 0 400 180"
-              className="w-full h-auto"
+              viewBox="0 0 400 160"
+              className="w-full h-auto overflow-visible"
               preserveAspectRatio="none"
             >
               <defs>
                 <linearGradient
-                  id="servicesChartGradient"
+                  id="dashboardChartGradient"
                   x1="0"
                   y1="0"
                   x2="0"
                   y2="1"
                 >
-                  <stop offset="0%" stopColor="#38BDF8" stopOpacity="0.35" />
-                  <stop offset="40%" stopColor="#155EEF" stopOpacity="0.12" />
-                  <stop offset="100%" stopColor="#020617" stopOpacity="0" />
+                  <stop offset="0%" stopColor="#38BDF8" stopOpacity="0.4" />
+                  <stop offset="50%" stopColor="#155EEF" stopOpacity="0.15" />
+                  <stop offset="100%" stopColor="#020617" stopOpacity="0.0" />
                 </linearGradient>
+
                 <linearGradient
-                  id="servicesLineGradient"
+                  id="dashboardLineGradient"
                   x1="0"
                   y1="0"
                   x2="1"
                   y2="0"
                 >
                   <stop offset="0%" stopColor="#155EEF" />
+                  <stop offset="50%" stopColor="#00C2FF" />
                   <stop offset="100%" stopColor="#38BDF8" />
                 </linearGradient>
-                <filter id="servicesLineGlow">
+
+                <filter id="dashboardLineGlow" x="-10%" y="-10%" width="120%" height="120%">
                   <feGaussianBlur stdDeviation="3" result="blur" />
                   <feMerge>
                     <feMergeNode in="blur" />
@@ -191,75 +208,58 @@ const AnalyticsDashboard: React.FC = () => {
                 </filter>
               </defs>
 
-              {/* Horizontal grid lines */}
-              {[0, 36, 72, 108, 144, 180].map((y, i) => (
+              {/* Horizontal Grid Guidelines */}
+              {[0, 32, 64, 96, 128, 160].map((y, idx) => (
                 <line
-                  key={i}
+                  key={idx}
                   x1="0"
                   y1={y}
                   x2="400"
                   y2={y}
-                  stroke="rgba(215,239,255,0.05)"
-                  strokeWidth="0.5"
+                  stroke="rgba(215,239,255,0.07)"
+                  strokeWidth="0.75"
                 />
               ))}
 
-              {/* Area fill */}
-              <path d={chartAreaPath} fill="url(#servicesChartGradient)" />
+              {/* Area Gradient Fill */}
+              <path d={chartAreaPath} fill="url(#dashboardChartGradient)" />
 
-              {/* Main line */}
+              {/* Main Glowing Curve Stroke */}
               <path
                 d={chartLinePath}
                 fill="none"
-                stroke="url(#servicesLineGradient)"
-                strokeWidth="2"
+                stroke="url(#dashboardLineGradient)"
+                strokeWidth="2.5"
                 strokeLinecap="round"
+                filter="url(#dashboardLineGlow)"
               />
 
-              {/* Glow line */}
-              <path
-                d={chartLinePath}
-                fill="none"
-                stroke="#00C2FF"
-                strokeWidth="1.5"
-                opacity="0.3"
-                filter="url(#servicesLineGlow)"
-              />
-
-              {/* Peak dot */}
+              {/* Peak Highlight Pulse on May 31 */}
               <circle
                 cx="400"
-                cy="15"
+                cy="8"
                 r="4"
                 fill="#38BDF8"
-                stroke="#020617"
-                strokeWidth="2"
+                stroke="#FFFFFF"
+                strokeWidth="1.5"
+                className="drop-shadow-[0_0_8px_#38BDF8]"
               />
               <circle
                 cx="400"
-                cy="15"
+                cy="8"
                 r="8"
                 fill="none"
                 stroke="#38BDF8"
-                strokeWidth="0.5"
-                opacity="0.3"
+                strokeWidth="1"
+                opacity="0.5"
+                className="animate-ping"
               />
             </svg>
-
-            {/* Peak callout badge */}
-            <div className="absolute top-0 right-0 -translate-y-1 translate-x-0 flex items-center gap-1 px-2 py-0.5 rounded-md bg-[#155EEF]/25 border border-[#155EEF]/35 backdrop-blur-sm">
-              <span className="text-[10px] sm:text-[11px] font-inter font-bold text-[#38BDF8]">
-                4.52K
-              </span>
-              <span className="text-[8px] sm:text-[9px] font-inter text-slate-400">
-                Conversions
-              </span>
-            </div>
           </div>
         </div>
 
-        {/* X-axis labels */}
-        <div className="flex justify-between mt-2 ml-7 sm:ml-9 text-[9px] sm:text-[10px] font-inter text-slate-500">
+        {/* X-Axis Date Labels */}
+        <div className="flex justify-between pl-8 pr-1 text-[10px] font-inter text-slate-400 select-none">
           <span>Apr 26</span>
           <span>May 3</span>
           <span>May 10</span>
@@ -269,96 +269,98 @@ const AnalyticsDashboard: React.FC = () => {
         </div>
       </div>
 
-      {/* ============================================== */}
-      {/* PANEL 3: Top Performing Campaigns              */}
-      {/* ============================================== */}
-      <div className="relative rounded-xl bg-[#06132B]/70 backdrop-blur-md border border-[rgba(215,239,255,0.12)] p-4 sm:p-5 overflow-hidden">
-        <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-sky-300/15 to-transparent pointer-events-none" />
-
-        <span className="font-inter font-semibold text-sm text-white mb-4 block">
+      {/* ========================================================= */}
+      {/* 3. BOTTOM SUB-SECTION: Top Campaigns + Radial Efficiency  */}
+      {/* ========================================================= */}
+      <div className="relative z-10 flex flex-col gap-2.5 pt-3 border-t border-sky-400/15">
+        <span className="font-inter font-semibold text-sm text-white">
           Top Performing Campaigns
         </span>
 
-        <div className="flex flex-col sm:flex-row gap-5 sm:gap-6">
-          {/* Campaign rows */}
-          <div className="flex-1 flex flex-col gap-3">
+        <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-6">
+          {/* Left: 4 Campaign Progress Bars */}
+          <div className="flex-1 w-full flex flex-col gap-2.5">
             {campaigns.map((c, i) => (
-              <div key={i} className="flex items-center gap-2 sm:gap-3">
-                <div className="flex items-center gap-2 min-w-[120px] sm:min-w-[150px]">
+              <div key={i} className="flex items-center gap-3">
+                {/* Campaign Dot & Title */}
+                <div className="flex items-center gap-2 min-w-[130px] sm:min-w-[155px]">
                   <div
-                    className="w-2.5 h-2.5 rounded-full shrink-0 shadow-[0_0_6px_currentColor]"
+                    className="w-2.5 h-2.5 rounded-full shrink-0"
                     style={{
                       backgroundColor: c.color,
-                      boxShadow: `0 0 6px ${c.color}40`,
+                      boxShadow: `0 0 8px ${c.color}`,
                     }}
                   />
-                  <span className="font-inter text-[11px] sm:text-xs text-slate-300 truncate">
+                  <span className="font-inter text-xs text-slate-300 truncate">
                     {c.name}
                   </span>
                 </div>
-                <div className="flex-1 h-[7px] rounded-full bg-[#081B3A] overflow-hidden">
+
+                {/* Progress Bar Track */}
+                <div className="flex-1 h-2 rounded-full bg-[#051433] border border-sky-400/15 overflow-hidden">
                   <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: c.width }}
                     viewport={{ once: true }}
                     transition={{
-                      duration: 1,
+                      duration: 1.1,
                       delay: 0.2 + i * 0.1,
                       ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="h-full rounded-full bg-gradient-to-r from-[#155EEF] to-[#38BDF8]"
+                    className="h-full rounded-full bg-gradient-to-r from-[#155EEF] via-[#00C2FF] to-[#38BDF8] shadow-[0_0_8px_rgba(0,194,255,0.5)]"
                   />
                 </div>
-                <span className="font-inter text-[11px] sm:text-xs font-semibold text-white min-w-[36px] text-right">
+
+                {/* Metric Value */}
+                <span className="font-inter text-xs font-semibold text-white min-w-[36px] text-right">
                   {c.value}
                 </span>
               </div>
             ))}
           </div>
 
-          {/* Radial Gauge — 87% Campaign Efficiency */}
-          <div className="flex items-center justify-center sm:justify-end shrink-0">
-            <div className="relative w-24 h-24 sm:w-[100px] sm:h-[100px]">
-              <svg
-                viewBox="0 0 100 100"
-                className="w-full h-full -rotate-90"
-              >
+          {/* Right: 87% Campaign Efficiency Radial Donut Gauge */}
+          <div className="flex items-center justify-center shrink-0">
+            <div className="relative w-22 h-22 sm:w-24 sm:h-24">
+              <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
                 <defs>
                   <linearGradient
-                    id="servicesGaugeGradient"
+                    id="efficiencyGaugeGradient"
                     x1="0%"
                     y1="0%"
                     x2="100%"
                     y2="0%"
                   >
                     <stop offset="0%" stopColor="#155EEF" />
+                    <stop offset="60%" stopColor="#00C2FF" />
                     <stop offset="100%" stopColor="#38BDF8" />
                   </linearGradient>
                 </defs>
-                {/* Background track */}
+                {/* Background Track */}
                 <circle
                   cx="50"
                   cy="50"
-                  r="40"
+                  r="38"
                   fill="none"
-                  stroke="#081B3A"
-                  strokeWidth="7"
+                  stroke="#051433"
+                  strokeWidth="8"
                 />
-                {/* Progress arc */}
+                {/* Glowing Progress Arc (87% of 238.76 = ~207.7) */}
                 <circle
                   cx="50"
                   cy="50"
-                  r="40"
+                  r="38"
                   fill="none"
-                  stroke="url(#servicesGaugeGradient)"
-                  strokeWidth="7"
+                  stroke="url(#efficiencyGaugeGradient)"
+                  strokeWidth="8"
                   strokeLinecap="round"
-                  strokeDasharray="218.6 251.3"
+                  strokeDasharray="207.7 238.8"
+                  className="drop-shadow-[0_0_8px_rgba(0,194,255,0.6)]"
                 />
               </svg>
-              {/* Center label */}
+              {/* Inner Center Statistics */}
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="font-poppins font-bold text-lg sm:text-xl text-white leading-none">
+                <span className="font-poppins font-bold text-lg sm:text-xl text-white leading-none drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]">
                   87%
                 </span>
                 <span className="font-inter text-[8px] sm:text-[9px] text-slate-400 mt-0.5 text-center leading-tight">
