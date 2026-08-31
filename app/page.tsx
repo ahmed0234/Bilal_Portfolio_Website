@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import HeroBackground from "@/components/HeroBackground";
 import Navbar from "@/components/Navbar";
+import ServicesSection from "@/components/services/ServicesSection";
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
         {/* Hero content: occupies remaining 90vh */}
         <Hero />
       </div>
+      <ServicesSection />
     </div>
   );
 };
